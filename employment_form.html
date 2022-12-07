@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<title>Employment Application Form</title>
+<script>
+	function validateform(){
+		let a = document.forms["jobapp"]["date"].value;
+		if (a == ""){
+		alert("Please fill the DATE field");
+		return false;
+		}
+		let b= document.forms["jobapp"]["fname"].value;
+		if (b == ""){
+		alert("Please fill the NAME field");
+		return false;
+		}
+		let c = document.forms["jobapp"]["fname"].value;
+		if (c.length < 5){
+		alert("Warning: Minimum 5 character NAME length required");
+		return false;
+		}
+		let d = document.forms["jobapp"]["address"].value;
+		if (d==""){
+		alert("Please fill the ADDRESS field");
+		return false;
+		}
+		let e = document.forms["jobapp"]["address"].value;
+		if (e.length < 10){
+		alert("Warning: Minimum 10 character ADDRESS length required");
+		return false;
+		}
+		let f = document.forms["jobapp"]["experience"].value;
+		if (f==""){
+		alert("Please fill the EXPERIENCE field");
+		return false;
+		}
+		let g = document.forms["jobapp"]["ssn"].value;
+		if (g==""){
+		alert("Please fill the SSN field");
+		return false;
+		}
+		let h = document.forms["jobapp"]["ssn"].value;
+		if (h.length !== 10){
+		alert("Please enter the correct SSN number");
+		return false;
+		}
+		let i = document.forms["jobapp"]["telephone"].value;
+		if (i==""){
+		alert("Please fill the TELEPHONE field");
+		return false;
+		}
+		let j = document.forms["jobapp"]["telephone"].value;
+		if (j.length < 8){
+		alert("Please enter TELEPHONE number of adequate length");
+		return false;
+		}
+		let k = document.forms["jobapp"]["belowage"].value;
+		if (k==""){
+		alert("Please fill the BELOW AGE field");
+		return false;
+		}
+		let l = document.forms["jobapp"]["belowage"].value;
+		if (l >= 18){
+		alert("Please enter  AGE value below 18");
+		return false;
+		}
+}
+</script>
+</head>
+<body>
+<form action="/action_page.php" method="post" name="jobapp" onsubmit="return validateform()">
+<table border="0" cellpadding= "10" width=80% align=center>
+<h2 align=center> EMPLOYMENT APPLICATION FORM </h2><br>
+<tr><th bgcolor="#a3a3c2" height=50>PLEASE PRINT ALL INFORMATION REQUESTED EXCEPT SIGNATURE</th></tr>
+<tr><td align=center bgcolor="#d1d1e0"><b>APPLICANTS MAY BE TESTED FOR ILLEGAL DRUGS</b></td></tr>
+<tr>
+	<td bgcolor="#efeff5"><b>Application Date:</b><input type="date" name="date" maxlength=10></td>
+</tr>
+<tr><td colspan=5  bgcolor="#efeff5"><b>First Name:<sup style="color:red">&lowast;</sup></b><input type="text" name="fname" maxlength=40>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Middle Name:</b><input type="text" name="mname" maxlength=40 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Last Name:<sup style="color:red">&lowast;</sup></b><input type="text" name="lname" maxlength=40 ></td></tr>
+</table>
+<table border="0" cellpadding= "10" width=80% align=center>
+<tr><td width=15% valign=top bgcolor="#efeff5"><b>Present Address:</b></td><td width=85%  bgcolor="#efeff5"><textarea name="address" rows=4 cols=30></textarea></td></tr>
+</table>
+<table border="0" cellpadding= "10" width=80% align=center>
+<tr><td bgcolor="#efeff5"><b>Aadhar Card No.:<sup style="color:red">&lowast;</sup></b><input type="text" name="aadhar" maxlength=10 ></td>
+<td bgcolor="#efeff5"><b>Mobile:<sup style="color:red">&lowast;</sup></b><input type="text" name="telephone" maxlength=15 ></td>
+<td bgcolor="#efeff5"><b>E-Mail:<sup style="color:red">&lowast;</sup></b><input type="email" name="telephone" maxlength=15 ></td></tr>
+</table>
+<table border="0" cellpadding= "10" width=80% align=center>
+<tr><td colspan=5 bgcolor="#efeff5"><b>Date of Birth:</b><input type="date" name="age" maxlength=2 ></td></tr>
+</table>
+<table border="0" cellpadding= "10" width=80% align=center>
+<tr>
+	<td bgcolor="#efeff5"><b>Experience (in years)<sup style="color:red">&lowast;</sup>:</b><input type="text" name="experience" maxlength=15 ></td>
+</tr>
+</table>
+<table cellpadding= "10" width=80% align=center bgcolor="#efeff5">
+<tr>
+	<td rowspan=4 valign=top width=20% bgcolor="#efeff5"><b>Position Applied For:</b></td>
+	<td width=30% bgcolor="#efeff5"><input type="checkbox" name="posapp" value="formfillingprocess" checked>Form Filling Process</td>
+	<td width=50% bgcolor="#efeff5"><input type="checkbox" name="posapp" value="typing">Typing</td>
+</tr>
+<tr>
+	<td bgcolor="#efeff5"><input type="checkbox" name="posapp" value="inboundprocess">Inbound Process</td>
+	<td bgcolor="#efeff5"><input type="checkbox" name="posapp" value="dataentry">Data Entry</td>
+</tr>
+<tr>
+	<td bgcolor="#efeff5"><input type="checkbox" name="posapp" value="outboundprocess">Outbound Process</td>
+	<td bgcolor="#efeff5"><input type="checkbox" name="posapp" value="smswork">SMS Work</td>
+</tr>
+<tr>
+	<td bgcolor="#efeff5"><input type="checkbox" name="posapp" value="emailreadingjobs">Email Reading Jobs</td>
+	<td bgcolor="#efeff5"><input type="checkbox" name="posapp" value="Surveyjobs">Survey Jobs</td>
+</tr>
+</table>
+<table  border="0" cellpadding= "10" width=80% align=center>
+<tr>
+	<td colspan=4 bgcolor="#efeff5"><b>Salary Desired in &#8377; (per annum):</b>
+	<select name = "salary" size = "1">
+<option value = "-1">--salary--</option>
+<option value = "1">below 4 lakhs</option>
+<option value = "1">4-6 lakhs</option>
+<option value = "1">6-9 lakhs</option>
+<option value = "1">9-12 lakhs</option>
+<option value = "1">above 12 lakhs</option></select></td>
+</tr>
+</table>
+<table  border="0" cellpadding= "10" width=80% align=center>
+<tr>
+	<td bgcolor="#efeff5" width=50%><b>How many hours can you work weekly?</b><input type="text" name="workschedule" maxlength=3 ></td>
+	<td bgcolor="#efeff5" width=50%><b>Can your work nights?</b>&nbsp;&nbsp;Yes<input type = "Radio" name = "radio">&nbsp;&nbsp; No<input type = "Radio" name = "radio"></td>
+</tr>
+</table>
+<table  border="0" cellpadding= "10" width=80% align=center bgcolor="#efeff5">
+<tr><td colspan=1 width=20% ><b>Employment Desired:</b></td>
+	<td colspan=4 ><input type="radio" name="employmenttype" value="fulltime" checked>FULL-TIME ONLY</td>
+	<td ><input type="radio" name="employmenttype" value="parttime">PART-TIME ONLY</td>
+	<td ><input type="radio" name="employmenttype" value="fullandpart">FULL- OR PART-TIME</td>
+</tr>
+</table>
+<table  border="0" cellpadding= "10" width=80% align=center>
+<tr><td colspan=5 bgcolor="#efeff5"><b>When available for work?</b><input type="date" name="workavailable" maxlength=2 ></td></tr>
+</table>
+<table border="0" cellpadding= "10" width=80% align=center bgcolor="#efeff5">
+<tr><th colspan=5 bgcolor="#a3a3c2" height=50>EDUCATIONAL QUALIFICATIONS</th></tr>
+<tr>
+	<td align=center bgcolor="#d1d1e0"><b>Name of School/College</b></td>
+	<td align=center bgcolor="#d1d1e0"><b>Degree Awarding Institute</b></td>
+	<td align=center bgcolor="#d1d1e0"><b>Degree Awarded</b></td>
+	<td align=center bgcolor="#d1d1e0"><b>Year of Graduation</b></td>
+	<td align=center bgcolor="#d1d1e0"><b>CGPA</b></td>
+</tr>
+<tr><td colspan=5><b>High School:</b></td></tr>
+<tr><td width=20%><input type="text" name="hstype" maxlength=50 ></td>
+	<td width=20%><input type="text" name="hsname" maxlength=50 ></td>
+	<td width=20%><input type="text" name="hslocation" maxlength=100 ></td>
+	<td width=20%><input type="text" name="hsyears" maxlength=50 ></td>
+	<td width=20%><input type="text" name="hsmajor" maxlength=50 ></td></tr>
+<tr><td colspan=5"><b>Bachelor's:</b></td></tr>
+<tr>
+	<td><input type="text" name="collegetype" maxlength=50 ></td>
+	<td><input type="text" name="collegename" maxlength=50 ></td>
+	<td><input type="text" name="collegelocation"  maxlength=100 ></td>
+	<td><input type="text" name="collegeyears"  maxlength=50 ></td>
+	<td><input type="text" name="collegemajor"  maxlength=50 ></td></tr>
+<tr><td colspan=5><b>Master's:</b></td></tr>
+<tr>
+	<td><input type="text" name="tradetype"  maxlength=50 ></td>
+	<td><input type="text" name="tradename" maxlength=50 ></td>
+	<td><input type="text" name="tradelocation"  maxlength=100 ></td>
+	<td><input type="text" name="tradeyears"  maxlength=50 ></td>
+	<td><input type="text" name="trademajor"  maxlength=50 ></td></tr>
+<tr><td colspan=5><b>Others:</b></td></tr>
+<tr>
+	<td><input type="text" name="protype"  maxlength=50 ></td>
+	<td><input type="text" name="proname"  maxlength=50 ></td>
+	<td><input type="text" name="prolocation"  maxlength=100 ></td>
+	<td><input type="text" name="proyears"  maxlength=50 ></td>
+	<td><input type="text" name="promajor"  maxlength=50 ></td>
+</tr>
+</table>
+<table border=0 cellpadding= "10" width=80% align=center bgcolor="#efeff5">
+<tr><th colspan=2  bgcolor="#a3a3c2">DOCUMENT UPLOAD</th></tr>
+<table border=1 cellspacing="0" cellpadding= "10" width=80% align=center bgcolor="#efeff5">
+<tr>
+	<td><b>Aadhar Card</b></td><td align=right><input type="file" name="aadharfile"></td>
+</tr>
+<tr>
+	<td><b>High School Marksheet</b></td><td align=right><input type="file" name="highschoolmarksheet">
+</tr>
+<tr>
+	<td><b>Bachelor's Marksheet</b></td><td align=right><input type="file" name="bachelorsmarksheet">
+</tr>
+<tr>
+	<td><b>Master's Marksheet</b></td><td align=right><input type="file" name="mastersmarksheet">
+</tr>
+</table>
+<table border="0" cellpadding= "10" width=80% align=center bgcolor="#efeff5">
+<tr><td colspan=5 bgcolor="#d1d1e0"><center><input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset"></center></td></tr>
+</table>
+</form>
+</body>
+</html>
